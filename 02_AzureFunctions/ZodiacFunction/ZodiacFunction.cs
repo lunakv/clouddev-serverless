@@ -32,6 +32,8 @@ namespace ZodiacFunction
                 return new BadRequestObjectResult("Invalid date of birth");
             }
 
+            log.LogInformation($"date of birth: {dateOfBirth}");
+
             ZodiacSign sign = GetSign(dateOfBirth);
             return new OkObjectResult(sign.ToString());
         }
@@ -42,47 +44,47 @@ namespace ZodiacFunction
             {
                 return ZodiacSign.Capricornus;
             }
-            if (dateOfBirth.Day <= 20 && dateOfBirth.Month <= 2)
+            if (dateOfBirth.Month <= 1 || dateOfBirth.Day <= 20 && dateOfBirth.Month <= 2)
             {
                 return ZodiacSign.Aquarius;
             }
-            if (dateOfBirth.Day <= 20 && dateOfBirth.Month <= 3)
+            if (dateOfBirth.Month <= 2 || dateOfBirth.Day <= 20 && dateOfBirth.Month <= 3)
             {
                 return ZodiacSign.Pisces;
             }
-            if (dateOfBirth.Day <= 20 && dateOfBirth.Month <= 4)
+            if (dateOfBirth.Month <= 3 || dateOfBirth.Day <= 20 && dateOfBirth.Month <= 4)
             {
                 return ZodiacSign.Aries;
             }
-            if (dateOfBirth.Day <= 20 && dateOfBirth.Month <= 5)
+            if (dateOfBirth.Month <= 4 || dateOfBirth.Day <= 20 && dateOfBirth.Month <= 5)
             {
                 return ZodiacSign.Taurus;
             }
-            if (dateOfBirth.Day <= 21 && dateOfBirth.Month <= 6)
+            if (dateOfBirth.Month <= 5 || dateOfBirth.Day <= 21 && dateOfBirth.Month <= 6)
             {
                 return ZodiacSign.Gemini;
             }
-            if (dateOfBirth.Day <= 22 && dateOfBirth.Month <= 7)
+            if (dateOfBirth.Month <= 6 || dateOfBirth.Day <= 22 && dateOfBirth.Month <= 7)
             {
                 return ZodiacSign.Cancer;
             }
-            if (dateOfBirth.Day <= 22 && dateOfBirth.Month <= 8)
+            if (dateOfBirth.Month <= 7 || dateOfBirth.Day <= 22 && dateOfBirth.Month <= 8)
             {
                 return ZodiacSign.Leo;
             }
-            if (dateOfBirth.Day <= 22 && dateOfBirth.Month <= 9)
+            if (dateOfBirth.Month <= 8 || dateOfBirth.Day <= 22 && dateOfBirth.Month <= 9)
             {
                 return ZodiacSign.Virgo;
             }
-            if (dateOfBirth.Day <= 23 && dateOfBirth.Month <= 10)
+            if (dateOfBirth.Month <= 9 || dateOfBirth.Day <= 23 && dateOfBirth.Month <= 10)
             {
                 return ZodiacSign.Libra;
             }
-            if (dateOfBirth.Day <= 22 && dateOfBirth.Month <= 11)
+            if (dateOfBirth.Month <= 10 || dateOfBirth.Day <= 22 && dateOfBirth.Month <= 11)
             {
                 return ZodiacSign.Scorpius;
             }
-            if (dateOfBirth.Day <= 21 && dateOfBirth.Month <= 12)
+            if (dateOfBirth.Month <= 11 || dateOfBirth.Day <= 21 && dateOfBirth.Month <= 12)
             {
                 return ZodiacSign.Sagittarius;
             }
