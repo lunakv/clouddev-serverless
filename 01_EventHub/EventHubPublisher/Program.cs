@@ -7,8 +7,8 @@ namespace EventHubPublisher
     // More samples: https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/eventhub/Azure.Messaging.EventHubs/samples
     public class Program
     {
-        private const string EventHubConnectionString = "Endpoint=sb://mffeventhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=nPbqiusz8R8tGnBPQArIaOGVyqEGt4ALc+AEhFhd4Nc="; // ie Endpoint=sb://XXX.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=XXX
-        private const string EventHubName = "myeventhub1"; // ie myeventhub1
+        private const string EventHubConnectionString = "Endpoint=sb://lunakvhub.servicebus.windows.net/;SharedAccessKeyName=lvhubkey;SharedAccessKey=fUg74CyRWRWiH0gW94yYt6xyUp7WErk0b+AEhJZo+io=;EntityPath=lvhub1";
+        private const string EventHubName = "lvhub1"; // ie myeventhub1
 
         public static async Task Main(string[] args)
         {

@@ -4,8 +4,8 @@ namespace EvetHubConsumer
 {
     internal class Program
     {
-        private const string EventHubConnectionString = "<<INSERT YOUR CONNECTION STRING>>"; // ie Endpoint=sb://XXX.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=XXX
-        private const string EventHubName = "<<INSERT YOUR EVENTHUB NAME>>"; // ie myeventhub1
+        private const string EventHubConnectionString = "Endpoint=sb://lunakvhub.servicebus.windows.net/;SharedAccessKeyName=lvhubkey;SharedAccessKey=fUg74CyRWRWiH0gW94yYt6xyUp7WErk0b+AEhJZo+io=;EntityPath=lvhub1";
+        private const string EventHubName = "lvhub1"; // ie myeventhub1
 
         public static async Task Main(string[] args)
         {
